@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edify Conference</title>
+    <link rel="shortcut icon" href="{{ url_for('static', filename='edify.ico') }}">
+    <link href="https://fonts.googleapis.com/css?family=Reem+Kufi|Roboto:300" rel="stylesheet">
+    <link href="https://use.fontawesome.com/releases/v5.13.1/css/all.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='reset.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <link href="static/main.3f6952e4.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: indigo;
+            color: white;
+            font-family: 'Roboto', sans-serif; /* Apply Google Font */
+        }
+        main {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            justify-content: center;
+            padding: 0 30px;
+            text-align: center;
+        }
+        main > .intro {
+            font-family: 'Reem Kufi', sans-serif; /* Apply Google Font */
+            font-size: 3.75em;
+            font-weight: 600;
+        }
+        .section-container {
+            padding: 20px;
+        }
+        .form-control {
+            border-radius: 15px;
+        }
+        .btn-default {
+            border-radius: 15px;
+            color: black;
+            background-color: white;
+        }
+        .list-unstyled {
+            padding-left: 0;
+            list-style: none;
+        }
+        .list-unstyled li {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        .list-unstyled li .fa-icon {
+            margin-right: 10px;
+            color: white; /* Set icon color to white */
+        }
+        .thank-you-message {
+            margin-top: 20%;
+            text-align: center;
+        }
+        .icons-social i {
+            font-size: 3em;
+            padding: 10px;
+        }
+        .icons-social a {
+            text-decoration: none;
+        }
+        .devto {
+            margin-bottom: -0.20rem;
+        }
+        .devto svg {
+            margin-bottom: -0.20rem;
+            margin-left: 0.675rem;
+            width: 2.65rem;
+            height: 2.65rem;
+        }
+    </style>
+</head>
+<body>
+    <main class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-8 intro">
+                <h2 style="color: white;">Welcome to Edify Conference 1.0</h2>
+            </div>
+        </div>
+        <div class="section-container">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <div class="section-container-spacer text-center">
+                            <h3 style="color: white;">Registration form</h3>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-10 col-md-offset-1">
+                                <form action="submit_form" method="post" class="reveal-content">
+                                    <div class="row">
+                                        <div class="col-md-7">
+                                            <div class="form-group">
+                                                <input name="first name" type="text" class="form-control" id="first name" placeholder="First Name" required>
+                                            </div>
+                                            <div class="form-group">
+                                                <input name="last name" type="text" class="form-control" id="last name" placeholder="Last Name" required>
+                                            </div>
+                                            <div class="form-group">
+                                                <select name="sex" class="form-control" id="sex" required>
+                                                    <option value="" disabled selected>Sex</option>
+                                                    <option value="male">Male</option>
+                                                    <option value="female">Female</option>
+                                                </select>
+                                            </div>
+                                            <div class="form-group">
+                                                <input name="email" type="email" class="form-control" id="email" placeholder="Email" required>
+                                            </div>
+                                            <div class="form-group">
+                                                <input name="phone number" type="tel" class="form-control" id="phone number" placeholder="Phone Number (+234)" required>
+                                            </div>
+                                            <div class="form-group">
+                                                <input name="Location" type="location" class="form-control" id="location" placeholder="What is your current location" required>
+                                            </div>
+                                            <div class="form-group">
+                                                <select name="volunteers" class="form-control" id="volunteers" required>
+                                                    <option value="" disabled selected>Volunteers</option>
+                                                    <option value="music">Music</option>
+                                                    <option value="media-publicity">Media & Publicity</option>
+                                                    <option value="ambience">Ambience</option>
+                                                    <option value="ushering-sanitation">Ushering & Sanitation</option>
+                                                    <option value="protocol">Protocol</option>
+                                                    <option value="prayer">Prayer</option>
+                                                    <option value="welcome-team">Welcome team</option>
+                                                </select>
+                                            </div>
+                                            <div class="form-group">
+                                                <textarea name="message" class="form-control" rows="5" placeholder="What are your Edify Expectations?" required></textarea>
+                                            </div>
+                                            <button type="submit" class="btn btn-default btn-lg">Submit</button>
+                                        </div>
+                                        <div class="col-md-5 address-container">
+                                            <ul class="list-unstyled">
+                                                <li>
+                                                    <span class="fa-icon">
+                                                        <i class="fa fa-phone" aria-hidden="true"></i>
+                                                    </span>
+                                                    <big><a href="tel:+2348134045950" style="color: white;">+234 813 404 5950</a></big>
+                                                </li>
+                                                <li>
+                                                    <span class="fa-icon">
+                                                        <i class="fa fa-at" aria-hidden="true"></i>
+                                                    </span>
+                                                    <big><a href="mailto:officialedifyconference@gmail.com" style="color: white;">theedifyconference@gmail.com</a></big>
+                                                </li>
+                                                <li>
+                                                    <span class="fa-icon">
+                                                        <i class="fa fa-map-marker" aria-hidden="true"></i>
+                                                    </span>
+                                                    <big style="color: white;">address</big>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

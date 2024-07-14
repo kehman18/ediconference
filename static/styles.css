@@ -1,0 +1,82 @@
+/* Typography */
+
+body {
+    color: white; /* Set default text color to white for all elements within body */
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: white; /* Ensure heading colors are white */
+}
+
+/* Form and Button Styles */
+
+form {
+    margin-top: 20px; /* Add space above the form */
+}
+
+.form-group {
+    margin-bottom: 15px; /* Add space between form groups */
+}
+
+.form-control {
+    background-color: transparent; /* Make form inputs transparent */
+    color: white; /* Set text color for form inputs */
+    border-radius: 15px; /* Add rounded corners to form inputs */
+    border: 1px solid white; /* Add white border to form inputs */
+    padding: 10px; /* Add padding to form inputs */
+}
+
+textarea.form-control {
+    resize: vertical; /* Allow vertical resizing of textareas */
+}
+
+.btn {
+    border-radius: 15px; /* Add rounded corners to buttons */
+    padding: 10px 20px; /* Add padding to buttons */
+    font-size: 1rem; /* Set font size for buttons */
+    cursor: pointer; /* Change cursor to pointer on hover */
+}
+
+.btn-default {
+    background-color: indigo; /* Set default background color for buttons */
+    color: black; /* Set text color for buttons */
+    border: 1px solid white; /* Add white border to buttons */
+}
+
+.btn-default:hover {
+    background-color: indigo; /* Change background color on hover */
+    color: white; /* Change text color on hover */
+}
+
+/* Additional Styles */
+
+.list-unstyled .fa-icon {
+    color: white; /* Set color of icons to white */
+}
+
+.list-unstyled big {
+    color: white; /* Set color of contact information to white */
+}
+
+/* Media Queries */
+
+@media (max-width: 576px) {
+    /* Additional styles for small screens */
+    main > .intro {
+        font-size: 2.5em; /* Adjust font size for smaller screens */
+    }
+}
+
+@media (max-width: 768px) {
+    /* Additional styles for medium screens */
+    main > .intro {
+        font-size: 3em; /* Adjust font size for medium screens */
+    }
+}
+
+@media (max-width: 992px) {
+    /* Additional styles for large screens */
+    main > .intro {
+        font-size: 3.5em; /* Adjust font size for larger screens */
+    }
+}
