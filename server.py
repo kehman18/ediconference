@@ -51,9 +51,8 @@ def write_to_file(data):
         email = data['email']
         phone_number = data['phone number']
         location = data['Location']
-        Volunteers = data['volunteers']
         expectations = data['message']
-        database.write(f'\n{first_name}, {last_name}, {sex}, {email}, {phone_number}, {location}, {Volunteers}, {expectations}')
+        database.write(f'\n{first_name}, {last_name}, {sex}, {email}, {phone_number}, {location}, {expectations}')
 
 # Function to write user data to CSV
 def write_to_csv(data):
@@ -64,10 +63,9 @@ def write_to_csv(data):
         email = data['email']
         phone_number = data['phone number']
         location = data['Location']
-        Volunteers = data['volunteers']
         expectations = data['message']
         csv_writer = csv.writer(database2, delimiter=',', quotechar='"', quoting=csv.QUOTE_MINIMAL)
-        csv_writer.writerow([first_name, last_name, sex, email, phone_number, location, Volunteers, expectations])
+        csv_writer.writerow([first_name, last_name, sex, email, phone_number, location, expectations])
 
 # Route to handle form submission
 @app.route('/submit_form', methods=['POST'])
