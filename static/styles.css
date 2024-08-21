@@ -1,15 +1,48 @@
 /* Typography */
-
 body {
-    color: white; /* Set default text color to white for all elements within body */
+    margin: 0;
+    padding: 0;
+    background: url('Background.png') no-repeat center center fixed;
+    background-size: cover;
+    color: white;
+    font-family: 'Roboto', sans-serif; /* Apply Google Font */
 }
 
 h1, h2, h3, h4, h5, h6 {
     color: white; /* Ensure heading colors are white */
 }
 
-/* Form and Button Styles */
+/* Background Image Positioning */
+#edify-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1; /* Make sure the image stays on top of other content */
+    width: auto; /* Adjust width as needed */
+    height: auto; /* Adjust height as needed */
+}
 
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        padding: 15px; /* Adjust padding for smaller screens */
+    }
+    .btn {
+        font-size: 0.875rem; /* Smaller button text on small screens */
+        padding: 8px 16px; /* Adjust button padding */
+    }
+    .form-group {
+        margin-bottom: 10px; /* Adjust space between form groups */
+    }
+}
+
+@media (min-width: 769px) {
+    .container {
+        padding: 30px; /* Larger padding for medium and larger screens */
+    }
+}
+
+/* Form and Button Styles */
 form {
     margin-top: 20px; /* Add space above the form */
 }
@@ -45,38 +78,4 @@ textarea.form-control {
 
 .btn-default:hover {
     background-color: indigo; /* Change background color on hover */
-    color: white; /* Change text color on hover */
-}
-
-/* Additional Styles */
-
-.list-unstyled .fa-icon {
-    color: white; /* Set color of icons to white */
-}
-
-.list-unstyled big {
-    color: white; /* Set color of contact information to white */
-}
-
-/* Media Queries */
-
-@media (max-width: 576px) {
-    /* Additional styles for small screens */
-    main > .intro {
-        font-size: 2.5em; /* Adjust font size for smaller screens */
-    }
-}
-
-@media (max-width: 768px) {
-    /* Additional styles for medium screens */
-    main > .intro {
-        font-size: 3em; /* Adjust font size for medium screens */
-    }
-}
-
-@media (max-width: 992px) {
-    /* Additional styles for large screens */
-    main > .intro {
-        font-size: 3.5em; /* Adjust font size for larger screens */
-    }
 }
