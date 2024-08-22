@@ -1,4 +1,3 @@
-'''data saving, hiding keys, flask attributes and picture processing'''
 import csv
 import os
 import uuid
@@ -8,7 +7,7 @@ from PIL import Image
 app = Flask(__name__)
 
 # Define the path to save uploaded images
-UPLOAD_FOLDER = r'.\static\\uploaded_images'
+UPLOAD_FOLDER = './static/uploaded_images'
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 
 @app.route("/")
@@ -84,7 +83,7 @@ def submit_form():
                 uploaded_image_path = os.path.join(app.config['UPLOAD_FOLDER'], image_upload.filename)
                 image_upload.save(uploaded_image_path)
                 
-                image_1_path = r'C:.\static\\EC_templates.png'
+                image_1_path = './static/EC_templates.png'
                 merged_image_filename = f'merged_{uuid.uuid4()}.png'
                 output_path = os.path.join(app.config['UPLOAD_FOLDER'], merged_image_filename)
 
