@@ -16,6 +16,8 @@ def my_home():
 
 @app.route("/<string:page_name>")
 def html_page(page_name):
+    if not page_name.endswith(".html"):
+        page_name += ".html"
     return render_template(page_name)
 
 # Function to center and merge two images
@@ -93,7 +95,7 @@ def submit_form():
     else:
         return "Oops, something went wrong. Please try again."
 
-@app.route('/thankyou_index.html')
+@app.route('/thankyou_index')
 def thankyou_index():
     merged_image = request.args.get('merged_image', None)
     return render_template('thankyou_index.html', merged_image=merged_image)
